@@ -63,29 +63,11 @@ int main(int argc, char *argv[]) {
 	{
 		//3. menu printing
 		//fill code here ----
-		char* option[4];
-		int i;
 		
-		option[0] = "print all the schedules";
-		option[1] = "search for schedules in the month";
-		option[2] = "search for schedules in the place";
-		option[3] = "search for specific type schedule";
-		option[4] = "exit";
-		
-		for(i=0;i<4;i++){
-		
-		printf("%i. %s\n",i,option[i]);
-		
-		}
 		
 		//4. get option from keyboard
 		//fill code here ----
-		printf("select an option : ");
-		scanf("%i",option[4]);
-		printf("which month? : ");
-		scanf("%i",option[4]);
-		
-		
+	
 		switch(option)
 		{
 			case 1: //print all the schedules
