@@ -85,9 +85,7 @@ int main(int argc, char *argv[]) {
 					
 					//fill code this part - end
 					printf("-----------------------------\n");
-					printf("1. Schedule Name : %p" , name);
-					printf("When : %p. %p", month, day);
-					printf("Where : %p",place);
+					sched_print(ndPtr);
 					printf("-----------------------------\n");
 					
 				};
@@ -108,9 +106,8 @@ int main(int argc, char *argv[]) {
 
 					//fill code this part - end
 					printf("-----------------------------\n");
-					printf("1. Schedule Name : %p" , name);
-					printf("When : %p. %p", month, day);
-					printf("Where : %p",place);
+					sched_getMonth(ndPtr);
+					sched_print(ndPtr);
 					printf("-----------------------------\n");
 					
 				}
@@ -130,9 +127,8 @@ int main(int argc, char *argv[]) {
 					
 					//fill code this part - end
 					printf("-----------------------------\n");
-					printf("1. Schedule Name : %p" , name);
-					printf("When : %p. %p", month, day);
-					printf("Where : %p",place);
+					sched_getPlace(ndPtr);
+					sched_print(ndPtr);
 					printf("-----------------------------\n");
 					
 				}
@@ -145,7 +141,7 @@ int main(int argc, char *argv[]) {
 				printf("your choice : ");
 				scanf("%s", typeName);
 				
-				if (/* fill code here -- convert the type and check if the type is valid */)
+				if (sched_convertType(ndPtr) != NULL )/* fill code here -- convert the type and check if the type is valid */
 				{
 					ndPtr = list;
 					while (list_isEndNode(ndPtr) == 0)
@@ -156,11 +152,11 @@ int main(int argc, char *argv[]) {
 						
 						//fill code this part - end
 						printf("-----------------------------\n");
-						printf("1. Schedule Name : %p" , name);
-						printf("When : %p. %p", month, day);
-						printf("Where : %p",place);
+						sched_print(ndPtr);
 						printf("-----------------------------\n");
-				}	
+					};
+				}
+				
 				else
 				{
 					printf("wrong type name!\n");
